@@ -138,7 +138,48 @@ We see that:
 * Deals with huge assymetry in data
 * Not applicable to zero or negative values
 
+![Image alt](https://github.com/Alexandrbel204/EDA-Bank-Marketing/blob/main/pictures/win1.png)
+![Image alt](https://github.com/Alexandrbel204/EDA-Bank-Marketing/blob/main/pictures/win2.png)
 
+
+### ML part
+I mostly used one-hot encoding and LabelEncoder for binary columns and SMOTE to balance data
+
+##### List of models I will use:
+1. Logistic Regression
+* captures global dependencies well.
+* Interpretable (coefficients can be viewed).
+* Usually weaker than trees, but has a good baseline.
+2. Random Forest
+* More powerful due to the ensemble of trees.
+* Better at capturing complex dependencies.
+* Robust to outliers and multicollinearity.
+* Almost always produces good results.
+3. XGBoost
+* The most powerful model for tabular data.
+* Can highlight weak signals in the data.
+* Typically has the highest ROC-AUC.
+* Provides good interpretation using feature_importances and SHAP.
+
+The results were not satisfying for me, so I used threshhold tuning for Recall and F1
+![Image alt](https://github.com/Alexandrbel204/EDA-Bank-Marketing/blob/main/pictures/res1.png)
+![Image alt](https://github.com/Alexandrbel204/EDA-Bank-Marketing/blob/main/pictures/res2.png)
+![Image alt](https://github.com/Alexandrbel204/EDA-Bank-Marketing/blob/main/pictures/res3.png)
+
+### Final best result
+XGBoost with threshold = 0.35
+- precision = 0.57
+- recall = 0.67
+- f1-score = 0.62
+
+Here is its feature importance plot
+![Image alt](https://github.com/Alexandrbel204/EDA-Bank-Marketing/blob/main/pictures/f1.png)
+
+#### Two factors are important for bank deposit campaigns: 
+1) not missing a client who might agree (Recall)
+2) not wasting budget and time on “empty” calls (Precision)
+
+## Conclusion
 
 
 
