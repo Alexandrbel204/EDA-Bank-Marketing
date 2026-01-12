@@ -6,3 +6,12 @@ This repository contains 2 files, first one with code and description, the secon
 Here is the info about dataset
 ![Image alt](https://github.com/Alexandrbel204/EDA-Bank-Marketing/blob/main/pictures/desc1.png)
 ![Image alt](https://github.com/Alexandrbel204/EDA-Bank-Marketing/blob/main/pictures/desc2.png)
+
+In 3 columns there are missed value, but alreday imputed with ‘unknown’ values or -1.
+Target is unbalanced.
+
+### There is no missing values in direct meaning, but we see, that such columns as “education” and “contact” has many unknown values and pdays has issues with -1 number
+job : 288
+education : 1857
+contact : 13020
+poutcome : 36959
