@@ -10,8 +10,18 @@ Here is the info about dataset
 In 3 columns there are missed value, but alreday imputed with ‘unknown’ values or -1.
 Target is unbalanced.
 
-### There is no missing values in direct meaning, but we see, that such columns as “education” and “contact” has many unknown values and pdays has issues with -1 number
-job : 288
-education : 1857
-contact : 13020
-poutcome : 36959
+#### There is no missing values in direct meaning, but we see, that such columns as “education” and “contact” has many unknown values and pdays has issues with -1 number
+* job : 288
+* education : 1857
+* contact : 13020
+* poutcome : 36959
+
+No duplicates.
+
+It is not useful to impute the columns with “unknown” values because:
+* job - means there is just no data and this is not “unemployed” as there is different category for that
+* education - there is no point in rename “unknown category” and this, again, shows just missing values 
+* contact - it again shows just error (missing) in original data and there will not be problem for ML
+  
+But pdays is much more interesting and we can consider -1 as Nan as it is no more than absense of contact with clients, I imputed them as “no_previous”, but as it is numerical value I put it in different column and initial problem will replace with 0 which literally means that clients didn’t have previous contact.
+
