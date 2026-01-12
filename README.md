@@ -180,6 +180,13 @@ Here is its feature importance plot
 2) not wasting budget and time on “empty” calls (Precision)
 
 ## Conclusion
+The dataset shows strong skewness, heavy-tailed financial-like distributions, and several categorical variables that meaningfully differentiate subscribers from nonsubscribers. Correlations are mostly weak, indicating that each feature provides unique information. After applying IQR-based winsorization, selective log transforms, and careful handling of
+missing categories, the dataset is clean, well-structured, and ready for machine learning.
+
+The optimal solution is XGBoost with threshold = 0.35, providing the best balance between
+business efficiency (Precision) and customer coverage (Recall). The model is well-interpretable
+through feature importance, stable across metrics, and aligns with expected marketing behaviors.
+This makes it the best candidate for deployment in a bank deposit campaign.
 
 
 
