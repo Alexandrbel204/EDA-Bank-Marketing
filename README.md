@@ -195,17 +195,7 @@ This makes it the best candidate for deployment in a bank deposit campaign.
 4. Hyperparameter Optimization
 5. Time-Aware Validation
 6. Cost-Sensitive Learning
-• Build a custom objective reflecting:
-– cost of unnecessary calls,
-– value of successfully converted clients.
-This approach can directly optimize business ROI rather than purely statistical metrics.
-11.0.7 7. Explainability & Monitoring
-• Use SHAP-based interpretability for deeper understanding of client behavior.
-• Track:
-– drift in distribution (balance, age, campaign),
-– model’s Precision/Recall over time,
-56
-– operational metrics (calls saved, conversions captured).
+7. Explainability & Monitoring
 8. Deploy and Integrate with Business Workflow
 • Implement model in marketing workflow:
 – rank customers by probability,
