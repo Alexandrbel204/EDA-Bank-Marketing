@@ -197,10 +197,6 @@ This makes it the best candidate for deployment in a bank deposit campaign.
 6. Cost-Sensitive Learning
 7. Explainability & Monitoring
 8. Deploy and Integrate with Business Workflow
-• Implement model in marketing workflow:
-– rank customers by probability,
-– limit daily calls based on available resources,
-– dynamically adjust threshold based on campaign goals.
 
 
 
