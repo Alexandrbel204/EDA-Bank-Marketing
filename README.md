@@ -198,7 +198,10 @@ This makes it the best candidate for deployment in a bank deposit campaign.
 7. Explainability & Monitoring
 8. Deploy and Integrate with Business Workflow
 
-
+• Research and work with financial/bank data
+• To find clients that most likely will take a deposit
+• Perform EDA to explore and clean data
+• Apply ML methods to solve the task
 
 
 
