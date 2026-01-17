@@ -16,10 +16,10 @@ This repository contains 2 files, first one with code and description, the secon
 
 
 Here is the info about dataset
-• Data source: https://archive.ics.uci.edu/dataset/222/bank+marketing
-• Dataset size: 16 features and 45211 observations
-• Missing values in columns ‘contact’, ‘pdays’, ‘poutcome’
-• Disbalance in target
+* Data source: https://archive.ics.uci.edu/dataset/222/bank+marketing
+* Dataset size: 16 features and 45211 observations
+* Missing values in columns ‘contact’, ‘pdays’, ‘poutcome’
+* Disbalance in target
 
 ![Image alt](https://github.com/Alexandrbel204/EDA-Bank-Marketing/blob/main/pictures/desc1.png)
 ![Image alt](https://github.com/Alexandrbel204/EDA-Bank-Marketing/blob/main/pictures/desc2.png)
