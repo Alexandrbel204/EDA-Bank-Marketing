@@ -15,7 +15,7 @@ This repository contains 2 files, first one with code and description, the secon
 3) Ensure that business loss is minimized
 
 
-Here is the info about dataset
+#### Here is the info about dataset
 * Data source: https://archive.ics.uci.edu/dataset/222/bank+marketing
 * Dataset size: 16 features and 45211 observations
 * Missing values in columns ‘contact’, ‘pdays’, ‘poutcome’
