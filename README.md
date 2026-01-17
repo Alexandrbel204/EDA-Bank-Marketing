@@ -9,7 +9,7 @@ This repository contains 2 files, first one with code and description, the secon
 * Perform EDA to explore and clean data
 * Apply ML methods to solve the task
 
-Ultimate goal of the project
+### Ultimate goal of the project
 1) To find potential clients that will subscribe to deposit
 2) Find as many target-client as possible
 3) Ensure that business loss is minimized
