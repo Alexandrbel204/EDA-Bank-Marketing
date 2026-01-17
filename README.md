@@ -9,6 +9,12 @@ This repository contains 2 files, first one with code and description, the secon
 * Perform EDA to explore and clean data
 * Apply ML methods to solve the task
 
+Ultimate goal of the project
+1) To find potential clients that will subscribe to deposit
+2) Find as many target-client as possible
+3) Ensure that business loss is minimized
+
+
 Here is the info about dataset
 ![Image alt](https://github.com/Alexandrbel204/EDA-Bank-Marketing/blob/main/pictures/desc1.png)
 ![Image alt](https://github.com/Alexandrbel204/EDA-Bank-Marketing/blob/main/pictures/desc2.png)
