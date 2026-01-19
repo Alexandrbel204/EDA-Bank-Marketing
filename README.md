@@ -205,35 +205,35 @@ business efficiency (Precision) and customer coverage (Recall). The model is wel
 through feature importance, stable across metrics, and aligns with expected marketing behaviors.
 This makes it the best candidate for deployment in a bank deposit campaign.
 
-Limitation of the analysis
+## Limitation of the analysis
 1. Dataset Structure and Bias
-  * The data originates from a single bank’s marketing campaign, which may introduce sampling
-  bias and limit generalizability to other institutions or regions.
-  * Some categorical groups (e.g., poutcome=success) are strongly imbalanced, which may cause
-  the model to over-emphasize rare patterns.
+    * The data originates from a single bank’s marketing campaign, which may introduce sampling
+    bias and limit generalizability to other institutions or regions.
+    * Some categorical groups (e.g., poutcome=success) are strongly imbalanced, which may cause
+    the model to over-emphasize rare patterns.
 2. Target Leakage Risk
-  * The feature duration is known to indirectly contain post-call information, meaning it may
-  not be available at prediction time in real campaigns.
-  Although retained for modeling purposes, real-world deployment would require removing or
-  separately evaluating this feature.
+    * The feature duration is known to indirectly contain post-call information, meaning it may
+    not be available at prediction time in real campaigns.
+    Although retained for modeling purposes, real-world deployment would require removing or
+    separately evaluating this feature.
 3. Outliers and Transformation Constraints
-  * Several features (e.g., pdays, previous, balance) contain extreme values and heavy skewness.
-  * Not all transformations were applicable (e.g., log transform cannot be applied to negative
-  balances or zeros), which limited normalization quality.
-  * Winsorization reduces outlier influence but may distort genuine high-value behavior.
+    * Several features (e.g., pdays, previous, balance) contain extreme values and heavy skewness.
+    * Not all transformations were applicable (e.g., log transform cannot be applied to negative
+    balances or zeros), which limited normalization quality.
+    * Winsorization reduces outlier influence but may distort genuine high-value behavior.
 4. Encoding and Feature Engineering
-  * Only standard encoding techniques (OHE, LabelEncoder) were used.
-  More advanced approaches (target encoding, embeddings) could extract richer information.
-  * Interaction features were not engineered; tree models partly capture interactions but linear
-  models remain limited.
+    * Only standard encoding techniques (OHE, LabelEncoder) were used.
+    More advanced approaches (target encoding, embeddings) could extract richer information.
+    * Interaction features were not engineered; tree models partly capture interactions but linear
+    models remain limited.
 5. Threshold Selection Dependency
-  * The chosen threshold (0.35 for XGBoost) is optimized for this specific test split.
-  In production, threshold stability should be validated across multiple time periods or via
-  cross-validation.
+    * The chosen threshold (0.35 for XGBoost) is optimized for this specific test split.
+    In production, threshold stability should be validated across multiple time periods or via
+    cross-validation.
 6. Limited Model Variety
-  * Only three models were evaluated.
-  Algorithms like CatBoost or LightGBM, which excel on categorical data, were not included
-  and may outperform the current models.
+    * Only three models were evaluated.
+    Algorithms like CatBoost or LightGBM, which excel on categorical data, were not included
+    and may outperform the current models.
 
 
 ## Future work and recommendations
