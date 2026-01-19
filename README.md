@@ -207,20 +207,20 @@ This makes it the best candidate for deployment in a bank deposit campaign.
 
 Limitation of the analysis
 1. Dataset Structure and Bias
-• The data originates from a single bank’s marketing campaign, which may introduce sampling
-bias and limit generalizability to other institutions or regions.
-• Some categorical groups (e.g., poutcome=success) are strongly imbalanced, which may cause
-the model to over-emphasize rare patterns.
+  • The data originates from a single bank’s marketing campaign, which may introduce sampling
+  bias and limit generalizability to other institutions or regions.
+  • Some categorical groups (e.g., poutcome=success) are strongly imbalanced, which may cause
+  the model to over-emphasize rare patterns.
 2. Target Leakage Risk
-• The feature duration is known to indirectly contain post-call information, meaning it may
-not be available at prediction time in real campaigns.
-Although retained for modeling purposes, real-world deployment would require removing or
-separately evaluating this feature.
+  • The feature duration is known to indirectly contain post-call information, meaning it may
+  not be available at prediction time in real campaigns.
+  Although retained for modeling purposes, real-world deployment would require removing or
+  separately evaluating this feature.
 3. Outliers and Transformation Constraints
-• Several features (e.g., pdays, previous, balance) contain extreme values and heavy skewness.
-• Not all transformations were applicable (e.g., log transform cannot be applied to negative
-balances or zeros), which limited normalization quality.
-• Winsorization reduces outlier influence but may distort genuine high-value behavior.
+  • Several features (e.g., pdays, previous, balance) contain extreme values and heavy skewness.
+  • Not all transformations were applicable (e.g., log transform cannot be applied to negative
+  balances or zeros), which limited normalization quality.
+  • Winsorization reduces outlier influence but may distort genuine high-value behavior.
 4. Encoding and Feature Engineering
   • Only standard encoding techniques (OHE, LabelEncoder) were used.
   More advanced approaches (target encoding, embeddings) could extract richer information.
